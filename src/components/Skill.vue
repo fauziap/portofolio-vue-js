@@ -1,11 +1,11 @@
 <template lang="">
   <section id="skill" class="">
-    <div class="container py-10 pb-16">
+    <div class=" py-10 container pb-16">
       <h2 class="text-center text-slate-200 text-4xl font-bold">
         Skill & Certificate
       </h2>
-      <div class="mt-10">
-        <div class="grid lg:grid-cols-2 gap-5">
+      <div class="mt-10 ">
+        <div class="grid container lg:mx-16 items-center lg:grid-cols-2 gap-5">
           <div
             class="hover grid md:grid-cols-2 grid-cols-1 justify-center mx-auto gap-4"
           >
@@ -20,10 +20,10 @@
               :imageAlt="item.imageAlt"
             />
           </div>
-          <div class=" justify-center mx-auto gap-4">
+          <div class=" justify-center gap-4">
             <img data-aos="fade-up"
             data-aos-duration="1000" src="../assets/sertifikatLaravelBWA.png"
-                        alt="Profile Image" class="rounded-lg shadow-teal-200 w-auto">
+                        alt="Profile Image" class="rounded-lg shadow-teal-200 md:w-3/4 ">
           </div>
 
         </div>
@@ -45,42 +45,42 @@ export default {
           id: 1,
           title: "Laravel",
           description: "Since 2023",
-          imageSrc: "./src/assets/laravel.svg",
+          imageSrc: "../assets/laravel.svg",
           imageAlt: "laravel",
         },
         {
           id: 2,
           title: "Livewire",
           description: "Since 2023",
-          imageSrc: "./src/assets/Livewire.svg",
+          imageSrc: "../assets/Livewire.svg",
           imageAlt: "livewire",
         },
         {
           id: 3,
           title: "Bootstrap",
           description: "Sejak 2022",
-          imageSrc: "./src/assets/bootstrap.svg",
+          imageSrc: "../assets/bootstrap.svg",
           imageAlt: "bootstrap",
         },
         {
           id: 4,
           title: "Tailwind CSS",
           description: "Since 2023",
-          imageSrc: "./src/assets/tailwind.svg",
+          imageSrc: "../assets/tailwind.svg",
           imageAlt: "tailwind css",
         },
         {
           id: 5,
           title: "Alpine JS",
           description: "Since 2023",
-          imageSrc: "./src/assets/alpinejs.svg",
+          imageSrc: "../assets/alpinejs.svg",
           imageAlt: "alpine js",
         },
         {
           id: 6,
           title: "Wordpress",
           description: "Sejak 2022",
-          imageSrc: "./src/assets/wordpress.svg",
+          imageSrc: "../assets/wordpress.svg",
           imageAlt: "wordpress",
         },
 
