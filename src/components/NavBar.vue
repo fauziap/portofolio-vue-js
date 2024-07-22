@@ -69,9 +69,9 @@
       <div
         v-if="mobile"
         @click.away="MobileClose()"
-        class="fixed lg:hidden transition-all duration-300 right-5 z-50 -mt-3"
+        class="fixed lg:hidden shadow-lg bg-slate-900 selection:bg-teal-300 rounded-2xl transition-all duration-300 right-5 z-50 "
       >
-        <div class="backdrop-blur w-64 text-slate-200 rounded-2xl py-4">
+        <div class=" w-64 text-slate-200 rounded-2xl py-4">
           <div class="grid text-center py-3">
             <a
               href="#home"
