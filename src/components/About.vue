@@ -1,11 +1,11 @@
 <template>
-    <section id="about" class="bg-gray-100 lg:h-screen h-auto ">
+    <section id="about" class=" lg:h-screen h-auto ">
         <div class="container py-10 mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-5">About Me</h2>
+            <h2 class="text-4xl font-bold text-center text-slate-200 mb-5">About Me</h2>
             <div class="lg:flex lg:mx-16 items-center mx-auto">
                 <div data-aos="fade-right" data-aos-duration="1000" class="lg:w-2/5 md:mt-5 mt-8 flex justify-center w-full">
                     <img src="../assets/uji.jpg"
-                        alt="Profile Image" class="rounded-full shadow-lg shadow-gray-500 w-64 h-64">
+                        alt="Profile Image" class="rounded-md shadow-teal-200 w-64 h-64">
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="lg:w-3/5 md:mt-5 mt-8">
                     <p class="text-lg mb-6">

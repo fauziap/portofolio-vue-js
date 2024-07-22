@@ -25,9 +25,9 @@ export default {
       ];
 
       if (this.variant === "primary") {
-        classes.push("bg-gray-500 py-2 rounded-full text-white font-medium", "hover:bg-gray-600");
+        classes.push("bg-teal-400/10 py-2 rounded-full text-teal-300 font-medium", "hover:bg-teal-900/20");
       } else if (this.variant === "outline") {
-        classes.push("border-2 py-1.5 border-gray-500 text-gray-600 rounded-full font-medium", "hover:bg-gray-600 hover:text-white ");
+        classes.push("border-2 py-1.5 border-teal-300 text-gray-600 rounded-full font-medium", "hover:bg-gray-600 hover:text-white ");
       }
 
       return classes;
