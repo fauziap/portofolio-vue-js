@@ -60,8 +60,8 @@
         <div class="flex lg:hidden gap-5">
 
           <button v-on:click="MobileMenu()">
-            <i v-if="!mobile" class="fa-solid fa-bars fa-lg"></i>
-            <i v-else class="fa-solid fa-xmark fa-lg"></i>
+            <i v-if="!mobile" class="fa-solid fa-bars fa-xl"></i>
+            <i v-else class="fa-solid fa-xmark fa-xl"></i>
           </button>
         </div>
       </div>
@@ -69,9 +69,9 @@
       <div
         v-if="mobile"
         @click.away="MobileClose()"
-        class="fixed lg:hidden shadow-lg bg-slate-900 selection:bg-teal-300 rounded-2xl transition-all duration-300 right-5 z-50 "
+        class="fixed lg:hidden shadow-lg bg-slate-900 selection:bg-teal-300 rounded-2xl transition-all right-6 duration-300 z-50 "
       >
-        <div class=" w-64 text-slate-200 rounded-2xl py-4">
+        <div class=" w-48 text-slate-200 shadow-teal-300 drop-shadow-xl rounded-2xl py-4">
           <div class="grid text-center py-3">
             <a
               href="#home"
