@@ -207,13 +207,13 @@
               <img src="../assets/booking/dashboardBo.svg" class="rounded-xl" />
             </div>
             <div class="">
-              <h2 class="font-bold text-2xl text-center">App Booking Class</h2>
+              <h2 class="font-bold text-2xl text-slate-200 text-center">App Booking Class</h2>
               <p class="text-justify mx-5 my-2">
                 Web App Booking Class ini digunakan untuk para teacher yang
                 ingin membooking ruangan yang ada di golden english dengan
                 tampilan yang responsive
               </p>
-              <h4 class="text-lg font-semibold pl-4">Technology</h4>
+              <h4 class="text-lg font-semibold text-slate-300 pl-4">Technology</h4>
               <ul
                 class="pl-4 py-1 flex flex-wrap"
                 aria-label="Technologies used:"
