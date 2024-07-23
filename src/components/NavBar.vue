@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="w-full z-50 transition duration-500 border-gray-200"
+    class="w-full z-50 transition relative duration-500 border-gray-200"
     :class="{
       'hidden ': scrollingDown,
       'block ': scrollingUp,

@@ -3,7 +3,6 @@
 
 <template>
   <HomeView/>
-  
 
   <RouterView />
 </template>
