@@ -1,7 +1,7 @@
 <template lang="">
   <section id="project" class="lg:h-screen md:h-auto h-screen">
     <div class="container lg:mx-16 mx-auto py-10">
-      <h2 class="text-center text-4xl font-bold text-slate-200">Project Me</h2>
+      <h2 class="text-center text-4xl font-bold text-slate-200">My Project</h2>
       <div
         class="md:grid hidden lg:grid-cols-3 md:grid-cols-2 mt-10 justify-center mx-auto gap-4"
       >

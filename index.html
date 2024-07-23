@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:image" content="./src/assets/logo_f.svg">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Ahmad Fauzi | Portofolio</title>
     <style>
       body {
@@ -13,6 +14,7 @@
         padding: 0;
         perspective: 1000px;
         position: relative;
+        font-family: 'Inter', sans-serif;
       }
       #starContainer {
         pointer-events: none;
@@ -54,118 +56,98 @@
 
     <script>
       const starContainer = document.getElementById("starContainer");
-      const starCount = 180; // Sedikit dikurangi dari 190
-      const stars = [];
-      let mouseX = 0,
-        mouseY = 0;
+const starCount = 150; // Dikurangi dari 180
+const stars = [];
+let mouseX = 0, mouseY = 0;
 
-      function createStar() {
-        const star = document.createElement("div");
-        star.classList.add("star");
-        resetStar(star);
-        starContainer.appendChild(star);
-        stars.push(star);
-      }
+function createStar() {
+  const star = document.createElement("div");
+  star.classList.add("star");
+  resetStar(star);
+  starContainer.appendChild(star);
+  stars.push(star);
+}
 
-      function resetStar(star) {
-        const size = Math.random() * 3 + 1;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.zIndex = Math.floor(Math.random() * 200) - 100;
-        star.speed = Math.random() * 0.15 + 0.05; // Sedikit diperlambat
-        star.style.transform = `translateZ(${star.zIndex}px)`;
-        star.style.animationDelay = `${Math.random() * 4}s`;
-      }
+function resetStar(star) {
+  const size = Math.random() * 2.5 + 1; // Sedikit dikurangi ukuran maksimal
+  star.style.cssText = `
+    width: ${size}px;
+    height: ${size}px;
+    left: ${Math.random() * 100}%;
+    top: ${Math.random() * 100}%;
+    transform: translateZ(${Math.floor(Math.random() * 200) - 100}px);
+    animation-delay: ${Math.random() * 4}s;
+  `;
+  star.speed = Math.random() * 0.1 + 0.05; // Diperlambat
+}
 
-      function updateStar(star) {
-        let top = parseFloat(star.style.top);
-        top += star.speed;
-        if (top > 100) {
-          resetStar(star);
-          top = -5;
-        }
-        star.style.top = `${top}%`;
+function updateStar(star) {
+  let top = parseFloat(star.style.top);
+  top += star.speed;
+  if (top > 100) {
+    resetStar(star);
+    top = -5;
+  }
+  star.style.top = `${top}%`;
 
-        const rect = star.getBoundingClientRect();
-        const starX = (rect.left + rect.width / 2) / window.innerWidth;
-        const starY = (rect.top + rect.height / 2) / window.innerHeight;
+  const rect = star.getBoundingClientRect();
+  const starX = rect.left / window.innerWidth;
+  const starY = rect.top / window.innerHeight;
 
-        const dx = mouseX - starX;
-        const dy = mouseY - starY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+  const dx = mouseX - starX;
+  const dy = mouseY - starY;
+  const distance = Math.hypot(dx, dy);
 
-        const maxDistance = 0.15;
-        const force = (maxDistance - distance) / maxDistance;
+  const maxDistance = 0.12; // Dikurangi
+  const force = (maxDistance - distance) / maxDistance;
 
-        if (force > 0) {
-          const scale = 1 + force * 1.5; // Sedikit dikurangi
-          const moveX = dx * force * 15; // Sedikit dikurangi
-          const moveY = dy * force * 15; // Sedikit dikurangi
-          star.style.transform = `translateZ(${star.zIndex}px) translate(${moveX}px, ${moveY}px) scale(${scale})`;
-        } else {
-          star.style.transform = `translateZ(${star.zIndex}px)`;
-        }
-      }
+  if (force > 0) {
+    const scale = 1 + force;
+    const moveX = dx * force * 10;
+    const moveY = dy * force * 10;
+    star.style.transform = `translateZ(${star.style.zIndex}px) translate(${moveX}px, ${moveY}px) scale(${scale})`;
+  }
+}
 
-      function createMeteor() {
-        const meteor = document.createElement("div");
-        meteor.classList.add("meteor");
-        const startX = Math.random() * 60 + 20;
-        const startY = -3;
-        meteor.style.left = `${startX}%`;
-        meteor.style.top = `${startY}%`;
-        const angle = Math.random() * 20 + 20;
-        const length = Math.random() * 120 + 80; // Sedikit dikurangi
-        meteor.style.width = `${length}px`;
-        meteor.style.height = "2px";
-        meteor.style.transform = `rotate(${angle}deg)`;
-        starContainer.appendChild(meteor);
+function createMeteor() {
+  const meteor = document.createElement("div");
+  meteor.className = "meteor";
+  const startX = Math.random() * 60 + 20;
+  const angle = Math.random() * 20 + 20;
+  const length = Math.random() * 100 + 80;
+  meteor.style.cssText = `
+    left: ${startX}%;
+    top: -3%;
+    width: ${length}px;
+    height: 2px;
+    transform: rotate(${angle}deg);
+  `;
+  starContainer.appendChild(meteor);
 
-        const duration = Math.random() * 400 + 400; // Sedikit dipercepat
-        meteor.animate(
-          [
-            { transform: `rotate(${angle}deg) translateX(0)`, opacity: 1 },
-            {
-              transform: `rotate(${angle}deg) translateX(${
-                window.innerWidth + length
-              }px)`,
-              opacity: 0,
-            },
-          ],
-          {
-            duration: duration,
-            easing: "linear",
-          }
-        ).onfinish = () => {
-          starContainer.removeChild(meteor);
-        };
-      }
+  const duration = Math.random() * 300 + 300; // Dipercepat
+  meteor.animate(
+    [
+      { transform: `rotate(${angle}deg) translateX(0)`, opacity: 1 },
+      { transform: `rotate(${angle}deg) translateX(${window.innerWidth + length}px)`, opacity: 0 },
+    ],
+    { duration, easing: "linear" }
+  ).onfinish = () => meteor.remove();
+}
 
-      for (let i = 0; i < starCount; i++) {
-        createStar();
-      }
+for (let i = 0; i < starCount; i++) createStar();
 
-      function animateStars() {
-        stars.forEach(updateStar);
-        if (Math.random() < 0.015) {
-          // Sedikit dikurangi frekuensinya
-          createMeteor();
-        }
-        requestAnimationFrame(animateStars);
-      }
+function animateStars() {
+  stars.forEach(updateStar);
+  if (Math.random() < 0.01) createMeteor(); // Frekuensi dikurangi
+  requestAnimationFrame(animateStars);
+}
 
-      animateStars();
+animateStars();
 
-      document.addEventListener(
-        "mousemove",
-        (e) => {
-          mouseX = e.clientX / window.innerWidth;
-          mouseY = e.clientY / window.innerHeight;
-        },
-        { passive: true }
-      );
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX / window.innerWidth;
+  mouseY = e.clientY / window.innerHeight;
+}, { passive: true });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -2,7 +2,7 @@
   <section id="skill" class="">
     <div class=" py-10 container pb-16">
       <h2 class="text-center text-slate-200 text-4xl font-bold">
-        Skill & Certificate
+        Skills & Certificate
       </h2>
       <div class="mt-10 ">
         <div class="grid lg:container lg:mx-16 items-center lg:grid-cols-2 gap-5">
