@@ -44,7 +44,7 @@
           <a
             href="https://github.com/fauziap"
             class=" hover:text-teal-400 text-xl"
-            ><i class="fa-brands fa-github fa-bounce"></i
+            ><i class="fa-brands fa-github "></i
           ></a>
           <a
             href="https://www.instagram.com/ahmadfauziyy/"
