@@ -5,7 +5,7 @@
         Skill & Certificate
       </h2>
       <div class="mt-10 ">
-        <div class="grid container lg:mx-16 items-center lg:grid-cols-2 gap-5">
+        <div class="grid lg:container lg:mx-16 items-center lg:grid-cols-2 gap-5">
           <div
             class="hover grid md:grid-cols-2 grid-cols-1 justify-center mx-auto gap-4"
           >
