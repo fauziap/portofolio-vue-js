@@ -1,6 +1,6 @@
-<template>
+<template class="w-full z-50 transition relative duration-500 border-gray-200">
   <nav
-    class="w-full z-50 transition relative duration-500 border-gray-200"
+    class=""
     :class="{
       'hidden ': scrollingDown,
       'block ': scrollingUp,
@@ -47,9 +47,9 @@
             ><i class="fa-brands fa-github "></i
           ></a>
           <a
-            href="https://www.instagram.com/ahmadfauziyy/"
+            href="https://www.linkedin.com/in/fauzisoftwaredev/"
             class=" hover:text-teal-400 text-md"
-            ><i class="fa-brands fa-instagram "></i
+            ><i class="fa-brands fa-linkedin "></i
           ></a>
           <a
             href="https://wa.me/6289663593789"
@@ -117,9 +117,9 @@
               ><i class="fa-brands fa-github "></i
             ></a>
             <a
-              href="https://www.instagram.com/ahmadfauziyy/"
+              href="https://www.linkedin.com/in/fauzisoftwaredev/"
               class=" hover:text-teal-400 text-md"
-              ><i class="fa-brands fa-instagram "></i
+              ><i class="fa-brands fa-linkedin "></i
             ></a>
             <a
               href="https://wa.me/6289663593789"

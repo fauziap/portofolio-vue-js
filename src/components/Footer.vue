@@ -16,9 +16,9 @@
             </li>
             <li>
               <a
-                href="https://www.instagram.com/ahmadfauziyy/"
+                href="https://www.linkedin.com/in/fauzisoftwaredev/"
                 class="text-gray-300 hover:text-gray-200 text-xl"
-                ><i class="fa-brands fa-instagram"></i
+                ><i class="fa-brands fa-linkedin"></i
               ></a>
             </li>
             <li>

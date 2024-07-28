@@ -4,7 +4,7 @@
       <h2 class="text-4xl font-bold text-slate-200 text-center mb-5">Contact Me</h2>
 
       <div class="flex gap-10 my-12 justify-center">
-        <a href="https://www.linkedin.com/in/ahmad-fauzi-12073a25b/">
+        <a href="https://www.linkedin.com/in/fauzisoftwaredev/">
           <i class="fa-brands text-teal-300 fa-linkedin text-4xl"></i>
         </a>
         <a href="https://github.com/fauziap">
